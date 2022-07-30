@@ -7,8 +7,10 @@ const Menu=()=>{
             <MenuItem url="/event" value="Event"/>
             <MenuItem url="/post" value="Post"/>
             <MenuItem url="/student" value="Create Stuedent"/> */}
-            <MenuItem url="/list" value="Suppliers List"/>
-            <MenuItem url="/supplier" value="Create Supplier"/>
+            <MenuItem url="/list" value="Suppliers List"/><br/>
+            <MenuItem url="/supplier" value="Create Supplier"/><br/>
+            <MenuItem url="/product" value="Product List"/><br/>
+            <MenuItem url="/buyer" value="Buyers List"/><br/>
             
         </div>
     )

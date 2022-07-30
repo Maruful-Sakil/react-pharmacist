@@ -1,7 +1,9 @@
 import Menu from "./Menu";
 import SupplierList from "./Supplierlist";
 import CreateSupplier from "./CreateSupplier";
+import ProductList from "./Productlist";
 import {BrowserRouter,Routes,Route} from 'react-router-dom';
+import BuyerList from "./Buyerlist";
 const Main = ()=>{
     return (
         <div>
@@ -15,6 +17,8 @@ const Main = ()=>{
                     <Route path="/supplier" element={<CreateStudent/>} /> */}
                     <Route path="/list" element={<SupplierList/>} />
                     <Route path="/supplier" element={<CreateSupplier/>} />
+                    <Route path="/product" element={<ProductList/>} />
+                    <Route path="/buyer" element={<BuyerList/>} />
                 </Routes>
             </BrowserRouter>
             
