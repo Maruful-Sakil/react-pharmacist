@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
+import axiosConfig from './axiosConfig';
 const SupplierList=()=>{
     const[suppliers,setSuppliers] = useState([]);
     const loadData=()=>{
-        axios.get("http://127.0.0.1:8000/api/supplier/get").then((rsp)=>{
+        axiosConfig.get("supplier/get").then((rsp)=>{
             setSuppliers(rsp.data);
         },(er)=>{
 

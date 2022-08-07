@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
+import axiosConfig from './axiosConfig';
 const BuyerList=()=>{
     const[buyers,setBuyers] = useState([]);
     const loadData=()=>{
-        axios.get("http://127.0.0.1:8000/api/buyer/list").then((rsp)=>{
+        axiosConfig.get("buyer/list").then((rsp)=>{
             setBuyers(rsp.data);
         },(er)=>{
 
