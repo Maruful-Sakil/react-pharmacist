@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import axiosConfig from './axiosConfig';
+import 'antd/dist/antd.css';
+import { Button } from "antd";
 const SupplierList=()=>{
     const[suppliers,setSuppliers] = useState([]);
     const[name, setName] = useState("");
@@ -46,8 +48,8 @@ const SupplierList=()=>{
     })
     }
     return(
-        <div>
-            <button onClick={loadData}>Load Data</button>
+        <div border="1" align={""}>
+            <Button onClick={loadData}>Load Data</Button>
 
                     <table border="1" style={{float: 'left'}}>
                         <tbody>
@@ -67,16 +69,16 @@ const SupplierList=()=>{
                             <td>{sp.email}</td>
                             <td>{sp.gender}</td>
                             <td>{sp.dob}</td>
-                            <td><button onClick={()=>selectUser(sp.suplliers_id)}>EDIT</button></td>
+                            <td><Button onClick={()=>selectUser(sp.suplliers_id)}>EDIT</Button></td>
                         </tr>
                             )
                         }
                         </tbody>
                     </table>
-                    <div>
+                    <div border="1" align={""}>
                         <input type="text" value={name} onChange={(e)=>{setName(e.target.value)}} /> <br /> <br />
                         <input type="text" value={email} onChange={(e)=>{setEmail(e.target.value)}} /> <br /> <br />
-                        <button onClick={updateUser}>Edit User</button>
+                        <Button onClick={updateUser}>Edit User</Button>
                     </div>
         </div>
     )
