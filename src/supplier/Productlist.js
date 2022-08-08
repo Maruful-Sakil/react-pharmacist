@@ -2,6 +2,13 @@ import { useState, useEffect } from "react";
 import axiosConfig from './axiosConfig';
 const ProductList=()=>{
     const[products,setProducts] = useState([]);
+    useEffect(()=>{
+        axiosConfig.get("product/list").then((rsp)=>{
+        setProducts(rsp.data);
+        },(er)=>{
+
+        })
+    },[]);
     const loadData=()=>{
         axiosConfig.get("product/list").then((rsp)=>{
             setProducts(rsp.data);
@@ -21,10 +28,9 @@ const ProductList=()=>{
     return(
         <div>
             <button onClick={loadData}>Load Data</button>
-            
-                {
-                    products.map((prod)=>
-                    <table border={1} align={""}>
+
+                    <table border="1" style={{float: 'left'}}>
+                        <tbody>
                         <tr>
                             <td>Product Id</td>
                             <td>Product Name</td>
@@ -33,7 +39,9 @@ const ProductList=()=>{
                             <td>Quantity</td>
                             <td>Action</td>
                         </tr>
-                        <tr>
+                        {
+                            products.map((prod)=>
+                            <tr>
                             <td>{prod.product_id}</td>
                             <td>{prod.pname}</td>
                             <td>{prod.price}</td>
@@ -41,10 +49,10 @@ const ProductList=()=>{
                             <td>{prod.quantity}</td>
                             <td><button onClick={()=>deleteUser(prod.product_id)}>DELETE</button></td>
                         </tr>
+                            )
+                        }
+                        </tbody>
                     </table>
-                    
-                    )
-                }
             
         </div>
     )
