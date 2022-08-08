@@ -6,8 +6,10 @@ const BuyerList=()=>{
     const[email, setEmail] = useState("");
     const[number, setNumber] = useState("");
     const[userId, setUserId] = useState(null);
+    const [msg,setMsg] = useState("");
     useEffect(()=>{
         axiosConfig.get("buyer/list").then((rsp)=>{
+        setMsg(rsp.data.msg);
         setBuyers(rsp.data);
         },(er)=>{
 
@@ -85,6 +87,7 @@ const BuyerList=()=>{
                     </table>
 
                 <div align={""}>
+                    <h4>{msg}</h4>
                     <input type="text" value={name} onChange={(e)=>setName(e.target.value)} /> <br/><br/>
                     <input type="text" value={email} onChange={(e)=>setEmail(e.target.value)} /> <br/><br/>
                     <input type="text" value={number} onChange={(e)=>setNumber(e.target.value)} /> <br/><br/>
