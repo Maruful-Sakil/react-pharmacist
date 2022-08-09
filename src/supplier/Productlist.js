@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import axiosConfig from './axiosConfig';
-import 'antd/dist/antd.css';
-import { Button } from "antd";
+//import 'antd/dist/antd.css';
+//import { Button } from "antd";
+import "../Mystyle.css";
 const ProductList=()=>{
     const[products,setProducts] = useState([]);
     useEffect(()=>{
@@ -29,7 +30,7 @@ const ProductList=()=>{
     }
     return(
         <div>
-            <Button onClick={loadData}>Load Data</Button>
+            <button onClick={loadData}>Load Data</button>
 
                     <table border="1" style={{float: ''}}>
                         <tbody>
@@ -49,7 +50,7 @@ const ProductList=()=>{
                             <td>{prod.price}</td>
                             <td>{prod.category}</td>
                             <td>{prod.quantity}</td>
-                            <td><Button onClick={()=>deleteUser(prod.product_id)}>DELETE</Button></td>
+                            <td><button onClick={()=>deleteUser(prod.product_id)}>DELETE</button></td>
                         </tr>
                             )
                         }

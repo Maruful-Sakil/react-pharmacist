@@ -1,4 +1,5 @@
 import Menu from "./Menu";
+import "../Mystyle.css";
 import SupplierList from "./Supplierlist";
 import CreateSupplier from "./CreateSupplier";
 import ProductList from "./Productlist";

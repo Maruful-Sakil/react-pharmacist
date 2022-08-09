@@ -1,4 +1,5 @@
 import MenuItem from "./Menuitem";
+import "../Mystyle.css";
 const Menu=()=>{
     return (
         <div>
@@ -7,10 +8,10 @@ const Menu=()=>{
             <MenuItem url="/event" value="Event"/>
             <MenuItem url="/post" value="Post"/>
             <MenuItem url="/student" value="Create Stuedent"/> */}
-            <MenuItem url="/list" value="Suppliers List"/><br/>
-            <MenuItem url="/supplier" value="Create Supplier"/><br/>
-            <MenuItem url="/product" value="Product List"/><br/>
-            <MenuItem url="/buyer" value="Buyers List"/><br/>
+            <MenuItem url="/list" value="SuppliersList    "/>
+            <MenuItem url="/supplier" value="    Registration    "/>
+            <MenuItem url="/product" value="    ProductList    "/>
+            <MenuItem url="/buyer" value="    BuyersList"/>
             
         </div>
     )

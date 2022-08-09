@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import axiosConfig from './axiosConfig';
-import 'antd/dist/antd.css';
-import { Button } from "antd";
+//import 'antd/dist/antd.css';
+//import { Button } from "antd";
+import "../Mystyle.css";
 const BuyerList=()=>{
     const[buyers,setBuyers] = useState([]);
     const[name, setName] = useState("");
@@ -61,7 +62,7 @@ const BuyerList=()=>{
     }
     return(
         <div>
-            <Button onClick={loadData}>Load Data</Button>
+            <button onClick={loadData}>Load Data</button>
             
                     <table border="1" style={{float: 'left'}}>
                         <tbody>
@@ -81,7 +82,7 @@ const BuyerList=()=>{
                             <td>{buyers.email}</td>
                             <td>{buyers.number}</td>
                             <td>{buyers.destination}</td>
-                            <td><Button onClick={()=>selectBuyer(buyers.id)}>UPDATE</Button></td>
+                            <td><button onClick={()=>selectBuyer(buyers.id)}>UPDATE</button></td>
                         </tr>
                             )
                         }
@@ -93,7 +94,7 @@ const BuyerList=()=>{
                     <input type="text" value={name} onChange={(e)=>setName(e.target.value)} /> <br/><br/>
                     <input type="text" value={email} onChange={(e)=>setEmail(e.target.value)} /> <br/><br/>
                     <input type="text" value={number} onChange={(e)=>setNumber(e.target.value)} /> <br/><br/>
-                    <Button onClick={updateBuyers}>Update Buyer</Button>
+                    <button onClick={updateBuyers}>Update Buyer</button>
                 </div>
                 
             
