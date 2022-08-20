@@ -19,7 +19,7 @@ const BuyerList=()=>{
         })
     },[]);
     function getBuyers(){
-        fetch("http://127.0.0.1:8000/buyers/list").then((result)=>{
+        axiosConfig.get("http://127.0.0.1:8000/buyers/list").then((result)=>{
             result.json().then((rsp)=>{
                 setBuyers(rsp)
                 setName(rsp[0].name);

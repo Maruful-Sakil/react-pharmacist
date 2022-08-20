@@ -2,7 +2,6 @@ import { useState } from "react";
 import axiosConfig from './axiosConfig';
 //import 'antd/dist/antd.css';
 //import { Button } from "antd";
-//import "../Mystyle.css";
 import "../Formstyle.css";
 
 const CreateSupplier=()=>{

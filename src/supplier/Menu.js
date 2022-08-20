@@ -8,10 +8,12 @@ const Menu=()=>{
             <MenuItem url="/event" value="Event"/>
             <MenuItem url="/post" value="Post"/>
             <MenuItem url="/student" value="Create Stuedent"/> */}
-            <MenuItem url="/list" value="SuppliersList    "/>
+            <MenuItem url="/login" value="    Login"/>
             <MenuItem url="/supplier" value="    Registration    "/>
+            <MenuItem url="/list" value="SuppliersList    "/>
             <MenuItem url="/product" value="    ProductList    "/>
             <MenuItem url="/buyer" value="    BuyersList"/>
+            
             
         </div>
     )

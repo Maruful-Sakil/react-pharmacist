@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import axiosConfig from './axiosConfig';
 //import 'antd/dist/antd.css';
 //import { Button } from "antd";
+//import { Table } from "antd";
 import "../Mystyle.css";
 const ProductList=()=>{
     const[products,setProducts] = useState([]);

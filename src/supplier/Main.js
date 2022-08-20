@@ -5,6 +5,7 @@ import CreateSupplier from "./CreateSupplier";
 import ProductList from "./Productlist";
 import {BrowserRouter,Routes,Route} from 'react-router-dom';
 import BuyerList from "./Buyerlist";
+import Login from "./Login";
 const Main = ()=>{
     return (
         <div>
@@ -16,10 +17,12 @@ const Main = ()=>{
                     <Route path="/event" element={<EventHandle/>} />
                     <Route path="/post" element={<Post/>} />
                     <Route path="/supplier" element={<CreateStudent/>} /> */}
-                    <Route path="/list" element={<SupplierList/>} />
                     <Route path="/supplier" element={<CreateSupplier/>} />
+                    <Route path="/login" element={<Login/>} />
+                    <Route path="/list" element={<SupplierList/>} />
                     <Route path="/product" element={<ProductList/>} />
                     <Route path="/buyer" element={<BuyerList/>} />
+                    <Route path="/login" element={<Login/>} />
                 </Routes>
             </BrowserRouter>
             
