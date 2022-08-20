@@ -21,7 +21,6 @@ const CreateSupplier=()=>{
             setMsg(succ.data.msg);
             window.location.href="/list";
         },(err)=>{
-            debugger;
             setErrs(err.response.data);
         })
     }

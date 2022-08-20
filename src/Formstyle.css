@@ -10,7 +10,7 @@ html {
   
   /*background = gradient + image pattern combo*/
   background: 
-    linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6));
+    linear-gradient(rgba(160, 18, 136, 0.6), rgba(109, 33, 180, 0.6));
 }
 
 body {
@@ -55,7 +55,7 @@ body {
 /*buttons*/
 #msform .action-button {
   width: 100px;
-  background: #27AE60;
+  background: #5b27ae;
   font-weight: bold;
   color: white;
   border: 0 none;
@@ -65,7 +65,7 @@ body {
   margin: 10px 5px;
 }
 #msform .action-button:hover, #msform .action-button:focus {
-  box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+  box-shadow: 0 0 0 2px rgb(158, 36, 73), 0 0 0 3px #149fb8;
 }
 /*headings*/
 .fs-title {

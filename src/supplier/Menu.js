@@ -13,6 +13,7 @@ const Menu=()=>{
             <MenuItem url="/list" value="SuppliersList    "/>
             <MenuItem url="/product" value="    ProductList    "/>
             <MenuItem url="/buyer" value="    BuyersList"/>
+            <MenuItem url="/logout" value="    Logout"/>
             
             
         </div>

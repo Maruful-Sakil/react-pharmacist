@@ -6,6 +6,7 @@ import ProductList from "./Productlist";
 import {BrowserRouter,Routes,Route} from 'react-router-dom';
 import BuyerList from "./Buyerlist";
 import Login from "./Login";
+import Logout from "./Logout";
 const Main = ()=>{
     return (
         <div>
@@ -23,6 +24,7 @@ const Main = ()=>{
                     <Route path="/product" element={<ProductList/>} />
                     <Route path="/buyer" element={<BuyerList/>} />
                     <Route path="/login" element={<Login/>} />
+                    <Route path="/logout" element={<Logout/>} />
                 </Routes>
             </BrowserRouter>
             
