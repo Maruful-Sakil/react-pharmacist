@@ -9,7 +9,7 @@ const BuyerList=()=>{
     const[email, setEmail] = useState("");
     const[number, setNumber] = useState("");
     const[userId, setUserId] = useState(null);
-    const [msg,setMsg] = useState("");
+    const[msg,setMsg] = useState("");
     useEffect(()=>{
         axiosConfig.get("buyer/list").then((rsp)=>{
         setMsg(rsp.data.msg);
@@ -19,7 +19,7 @@ const BuyerList=()=>{
         })
     },[]);
     function getBuyers(){
-        axiosConfig.get("http://127.0.0.1:8000/buyers/list").then((result)=>{
+        axiosConfig.get("buyers/list").then((result)=>{
             result.json().then((rsp)=>{
                 setBuyers(rsp)
                 setName(rsp[0].name);
@@ -63,7 +63,6 @@ const BuyerList=()=>{
     return(
         <div>
             <button onClick={loadData}>Load Data</button>
-            
                     <table border="1" style={{float: 'left'}}>
                         <tbody>
                         <tr>
